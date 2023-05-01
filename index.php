@@ -44,7 +44,7 @@ if (isset($_GET['logout'])) {
         <?php if ($_SESSION['is_admin']) { ?>
           <li><a href="funcionarios.php">Funcionários</a></li>
         <?php } ?>
-        <li><a href="index.php?logout">Sair</a></li>
+        <li class="logout-button"><a href="index.php?logout">Sair</a></li>
       </ul>
     </nav>
     <h1 class="titulo-pagina">Black Tie</h1>

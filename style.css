@@ -126,7 +126,8 @@ body {
 }
 
 .logout-button {
-	margin-left: auto;
+	position: absolute;
+	right: 20px;
 }
 
 /* Estilo para o formulário de edição de clientes */
@@ -169,6 +170,7 @@ body {
 	border: none;
 	border-radius: 5px;
 	color: #fff;
+	font-size: 16px;
 	cursor: pointer;
 	font-weight: bold;
 	text-align: center;
