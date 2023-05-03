@@ -1,12 +1,11 @@
 <?php
-// Definir a variável $error fora do bloco if ($_SERVER['REQUEST_METHOD'] == 'POST')
-session_start();
-if (isset($_SESSION['error'])) {
-  $error = $_SESSION['error'];
-} else {
-  $error = null;
-}
 
+session_start();
+if (isset($_GET['error'])) {
+  $error = $_GET['error'];
+} else {
+  $error = '';
+}
 
 // Classe para autenticação
 class Auth
@@ -34,7 +33,8 @@ class Auth
       exit();
     } else {
       // Senha inválida, exibir mensagem de erro
-      $_SESSION['error'] = $error = 'Nome de usuário ou senha inválidos.';
+      header('Location: login.php?error=Nome de usuário ou senha inválidos.');
+      exit();
     }
   }
 }
@@ -60,18 +60,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   <title>Black Tie Login</title>
 </head>
 
-<body>
-  <div class="login-header">
-    <h2>Faça login</h2>
-  </div>
-  <form class="login-form" method="POST" action="login.php">
-    <input type="text" name="username" placeholder="Nome de usuário" required>
-    <input type="password" name="password" placeholder="Senha" required>
-    <button type="submit">Entrar</button>
-    <div class="error">
-      <?php echo $error; ?>
+<body class="">
+  <div class="container-login">
+    <div class="login-header">
+      <h2>Faça login</h2>
     </div>
-  </form>
+    <form class="login-form" method="POST" action="login.php">
+      <input type="text" name="username" placeholder="Nome de usuário" required>
+      <input type="password" name="password" placeholder="Senha" required>
+      <button type="submit">Entrar</button>
+      <div class="error">
+        <?php echo $error; ?>
+      </div>
+    </form>
+  </div>
 </body>
 
 </html>

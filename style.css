@@ -9,7 +9,7 @@
 /* Estilo para o formulário de login */
 .login-form {
 	max-width: 400px;
-	margin: 0 auto;
+	margin: auto;
 }
 
 /* Estilo para os campos de entrada do formulário */
@@ -130,7 +130,6 @@ body {
 	right: 20px;
 }
 
-/* Estilo para o formulário de edição de clientes */
 .container {
 	max-width: 1300px;
 	margin: 0 auto;
@@ -254,4 +253,20 @@ input[type="date"] {
 .is-admin {
 	margin-bottom: 20px;
 	font-weight: bold;
+}
+
+.container-login {
+	max-width: 500px;
+	margin: auto;
+	padding: 20px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	background-color: #f9f9f9;
+	box-shadow: 0 0 10px #ccc;
+}
+
+.flex {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
