@@ -41,6 +41,7 @@ if (isset($_GET['logout'])) {
         <li><a href="produtos.php">Produtos</a></li>
         <li><a href="alugueis.php">Alugueis</a></li>
         <li><a href="fornecedores.php">Fornecedores</a></li>
+        <li><a href="apiSapatos.php">API sapatos</a></li>
         <?php if ($_SESSION['is_admin']) { ?>
           <li><a href="funcionarios.php">Funcionários</a></li>
         <?php } ?>
